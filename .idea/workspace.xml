@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36a7da46-d9bb-4272-a4f9-e4877480b5fa" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/test/SpreadSheetControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/SpreadSheetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SpreadSheetControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +51,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.SpreadSheetProgram.executor": "Run",
+    "JUnit.SpreadSheetControllerTest.testFarewellMessage.executor": "Run",
+    "JUnit.SpreadSheetControllerTest.testWelcomeMessage.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -82,7 +85,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.SpreadSheetControllerTest.testFarewellMessage">
     <configuration name="SpreadSheetProgram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="spreadsheet.SpreadSheetProgram" />
       <module name="PDPLab8" />
@@ -96,8 +99,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpreadSheetControllerTest.testFarewellMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PDPLab8" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SpreadSheetControllerTest" />
+      <option name="METHOD_NAME" value="testFarewellMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpreadSheetControllerTest.testWelcomeMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PDPLab8" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SpreadSheetControllerTest" />
+      <option name="METHOD_NAME" value="testWelcomeMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SpreadSheetControllerTest.testFarewellMessage" />
+        <item itemvalue="JUnit.SpreadSheetControllerTest.testWelcomeMessage" />
         <item itemvalue="Application.SpreadSheetProgram" />
       </list>
     </recent_temporary>
@@ -105,8 +130,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
       </set>
     </attachedChunks>
   </component>
@@ -122,6 +147,8 @@
       <workItem from="1742349919604" duration="1446000" />
       <workItem from="1742407154603" duration="275000" />
       <workItem from="1742407436225" duration="2177000" />
+      <workItem from="1742409845363" duration="314000" />
+      <workItem from="1742412471886" duration="747000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -131,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742344785586</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1742409849993</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742409849993</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
