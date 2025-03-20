@@ -1,9 +1,9 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.io.IOException;
 
 import spreadsheet.MockSpreadSheet;
 import spreadsheet.SpreadSheet;
@@ -11,7 +11,6 @@ import spreadsheet.SpreadSheetController;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 /**
  * Enhanced test class for SpreadSheetController with additional edge cases.
@@ -64,50 +63,6 @@ public class EnhancedSpreadSheetControllerTest {
     // aB should be treated the same as AB (row 27)
     assertEquals("set(27, 0, 15.0)\n", log.toString());
   }
-
-//  @Test
-//  public void testGetRowNumDirectly() {
-//    // Test the getRowNum method directly for various inputs
-//    SpreadSheetController controller = new SpreadSheetController(mockSheet, new StringReader(""), output);
-//
-//    assertEquals(0, controller.getRowNum("a"));
-//    assertEquals(1, controller.getRowNum("b"));
-//    assertEquals(25, controller.getRowNum("z"));
-//    assertEquals(26, controller.getRowNum("aa"));
-//    assertEquals(27, controller.getRowNum("ab"));
-//    assertEquals(51, controller.getRowNum("az"));
-//    assertEquals(52, controller.getRowNum("ba"));
-//    assertEquals(701, controller.getRowNum("zz"));
-//    assertEquals(702, controller.getRowNum("aaa"));
-//  }
-//
-//  @Test(expected = IllegalArgumentException.class)
-//  public void testGetRowNumWithInvalidChar() {
-//    // Test that non-alphabetic characters in row strings are rejected
-//    SpreadSheetController controller = new SpreadSheetController(mockSheet, new StringReader(""), output);
-//    controller.getRowNum("a1");
-//  }
-//
-//  @Test(expected = IllegalArgumentException.class)
-//  public void testGetRowNumWithEmptyString() {
-//    // Test that empty strings are rejected
-//    SpreadSheetController controller = new SpreadSheetController(mockSheet, new StringReader(""), output);
-//    controller.getRowNum("");
-//  }
-//
-//  @Test
-//  public void testPrintMenuDirectly() {
-//    // Test the printMenu method directly
-//    SpreadSheetController controller = new SpreadSheetController(mockSheet, new StringReader(""), output);
-//
-//    controller.printMenu();
-//
-//    String outputString = output.toString();
-//    assertTrue(outputString.contains("assign-value"));
-//    assertTrue(outputString.contains("print-value"));
-//    assertTrue(outputString.contains("menu"));
-//    assertTrue(outputString.contains("q or quit"));
-//  }
 
   @Test(expected = IllegalArgumentException.class)
   public void testConstructorWithNullSheet() {
