@@ -30,7 +30,7 @@ public class SpreadSheetControllerTest {
     Readable input = new StringReader("q");
     SpreadSheetController controller = new SpreadSheetController(sheet, input, output);
 
-    controller.go();
+    controller.executeProgram();
 
     String outputString = output.toString();
     String[] lines = outputString.split(System.lineSeparator());
@@ -42,7 +42,7 @@ public class SpreadSheetControllerTest {
     Readable input = new StringReader("q");
     SpreadSheetController controller = new SpreadSheetController(sheet, input, output);
 
-    controller.go();
+    controller.executeProgram();
 
     String outputString = output.toString();
 

@@ -4,7 +4,10 @@ import org.junit.Test;
 import spreadsheet.BetterSpreadSheet;
 import spreadsheet.MockBetterSpreadSheet;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 
 /**
  * Test class for MockBetterSpreadSheet.
@@ -22,7 +25,6 @@ public class MockBetterSpreadSheetTest {
 
   @Test
   public void testDefaultConstructor() {
-    // Default constructor should set default return values
     assertEquals(0.0, mockSheet.get(0, 0), 0.001);
     assertTrue(mockSheet.isEmpty(0, 0));
     assertEquals(0, mockSheet.getWidth());
@@ -34,14 +36,11 @@ public class MockBetterSpreadSheetTest {
 
   @Test
   public void testParameterizedConstructor() {
-    // Create a mock with custom default values
     BetterSpreadSheet customMock = new MockBetterSpreadSheet(
             log, 42.0, false, 10, 20);
 
-    // Clear log from setup
     log.setLength(0);
 
-    // Test that the custom values are returned
     assertEquals(42.0, customMock.get(5, 5), 0.001);
     assertFalse(customMock.isEmpty(5, 5));
     assertEquals(10, customMock.getWidth());

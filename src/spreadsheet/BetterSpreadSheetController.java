@@ -16,12 +16,13 @@ public class BetterSpreadSheetController {
   /**
    * Constructs a controller for a BetterSpreadSheet.
    *
-   * @param sheet the BetterSpreadSheet to use
-   * @param readable the source of user input
+   * @param sheet      the BetterSpreadSheet to use
+   * @param readable   the source of user input
    * @param appendable the destination for output
    * @throws IllegalArgumentException if any argument is null
    */
-  public BetterSpreadSheetController(BetterSpreadSheet sheet, Readable readable, Appendable appendable)
+  public BetterSpreadSheetController(BetterSpreadSheet sheet, Readable readable,
+                                     Appendable appendable)
           throws IllegalArgumentException {
     if ((sheet == null) || (readable == null) || (appendable == null)) {
       throw new IllegalArgumentException("Sheet, readable or appendable is null");
@@ -42,64 +43,62 @@ public class BetterSpreadSheetController {
     int row, col, startRow, startCol, endRow, endCol;
     double value;
 
-    // Print the welcome message
     welcomeMessage();
 
-    while (!quit) { // Continue until the user quits
-      writeMessage("Type instruction: "); // Prompt for the instruction name
-      String userInstruction = sc.next(); // Take an instruction name
+    while (!quit) {
+      writeMessage("Type instruction: ");
+      String userInstruction = sc.next();
 
       switch (userInstruction) {
-        case "assign-value": // Assign a value to a cell
+        case "assign-value":
           try {
-            row = getRowNum(sc.next()); // Get the row string
-            col = sc.nextInt(); // Get the column number, starting with 1
-            value = sc.nextDouble(); // Get the value
-            betterSheet.set(row, col-1, value);
-            writeMessage("Set cell (" + row + "," + (col-1) + ") to " + value + System.lineSeparator());
+            row = getRowNum(sc.next());
+            col = sc.nextInt();
+            value = sc.nextDouble();
+            betterSheet.set(row, col - 1, value);
+            writeMessage("Set cell (" + row + "," + (col - 1) + ") to "
+                    + value + System.lineSeparator());
           } catch (IllegalArgumentException e) {
             writeMessage("Error: " + e.getMessage() + System.lineSeparator());
           }
           break;
-        case "print-value": // Print a value from the cell
+        case "print-value":
           try {
-            row = getRowNum(sc.next()); // Get the row string
-            col = sc.nextInt(); // Get the column number, starting with 1
-            writeMessage("Value: " + betterSheet.get(row, col-1) + System.lineSeparator());
+            row = getRowNum(sc.next());
+            col = sc.nextInt();
+            writeMessage("Value: " + betterSheet.get(row, col - 1) + System.lineSeparator());
           } catch (IllegalArgumentException e) {
             writeMessage("Error: " + e.getMessage() + System.lineSeparator());
           }
           break;
-        case "bulk-assign": // Bulk assign a value to a range of cells
+        case "bulk-assign":
           try {
-            startRow = getRowNum(sc.next()); // Get the start row string
-            startCol = sc.nextInt(); // Get the start column, starting with 1
-            endRow = getRowNum(sc.next()); // Get the end row string
-            endCol = sc.nextInt(); // Get the end column, starting with 1
-            value = sc.nextDouble(); // Get the value
+            startRow = getRowNum(sc.next());
+            startCol = sc.nextInt();
+            endRow = getRowNum(sc.next());
+            endCol = sc.nextInt();
+            value = sc.nextDouble();
 
-            betterSheet.bulkSet(startRow, startCol-1, endRow, endCol-1, value);
+            betterSheet.bulkSet(startRow, startCol - 1, endRow, endCol - 1, value);
             writeMessage("Bulk assigned " + value + " to region (" +
-                    startRow + "," + (startCol-1) + ") to (" +
-                    endRow + "," + (endCol-1) + ")" + System.lineSeparator());
+                    startRow + "," + (startCol - 1) + ") to (" +
+                    endRow + "," + (endCol - 1) + ")" + System.lineSeparator());
           } catch (IllegalArgumentException e) {
             writeMessage("Error: " + e.getMessage() + System.lineSeparator());
           }
           break;
-        case "menu": // Print the menu of supported instructions
+        case "menu":
           printMenu();
           break;
-        case "q": // Quit
-        case "quit": // Quit
+        case "q":
+        case "quit":
           quit = true;
           break;
-        default: // Error due to unrecognized instruction
+        default:
           writeMessage("Undefined instruction: " + userInstruction + System.lineSeparator());
           break;
       }
     }
-
-    // After the user has quit, print farewell message
     farewellMessage();
   }
 
@@ -144,10 +143,12 @@ public class BetterSpreadSheetController {
    */
   private void printMenu() throws IllegalStateException {
     writeMessage("Supported user instructions are: " + System.lineSeparator());
-    writeMessage("assign-value row-num col-num value (set a cell to a value)" + System.lineSeparator());
-    writeMessage("print-value row-num col-num (print the value at a given cell)" + System.lineSeparator());
-    writeMessage("bulk-assign start-row start-col end-row end-col value (set a region to a value)" +
-            System.lineSeparator());
+    writeMessage("assign-value row-num col-num value (set a cell to a value)"
+            + System.lineSeparator());
+    writeMessage("print-value row-num col-num (print the value at a given cell)"
+            + System.lineSeparator());
+    writeMessage("bulk-assign start-row start-col end-row end-col value (set a region to a value)"
+            + System.lineSeparator());
     writeMessage("menu (Print supported instruction list)" + System.lineSeparator());
     writeMessage("q or quit (quit the program) " + System.lineSeparator());
   }

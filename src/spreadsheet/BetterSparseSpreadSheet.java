@@ -16,13 +16,13 @@ public class BetterSparseSpreadSheet extends SparseSpreadSheet implements Better
   @Override
   public void bulkSet(int startRow, int startCol, int endRow, int endCol, double value)
           throws IllegalArgumentException {
-    // Validate input parameters
     if (startRow < 0 || startCol < 0 || endRow < 0 || endCol < 0) {
       throw new IllegalArgumentException("Row or column cannot be negative");
     }
 
     if (endRow < startRow || endCol < startCol) {
-      throw new IllegalArgumentException("End coordinates must be greater than or equal to start coordinates");
+      throw new IllegalArgumentException("End coordinates must be greater than or equal "
+              + "to start coordinates");
     }
 
     // Set all cells in the specified region to the given value

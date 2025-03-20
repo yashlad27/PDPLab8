@@ -4,9 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a7da46-d9bb-4272-a4f9-e4877480b5fa" name="Changes" comment="new and improved test cases to increase pit scores">
+    <list default="true" id="36a7da46-d9bb-4272-a4f9-e4877480b5fa" name="Changes" comment="edge cases and complete test cases for whole program working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spreadsheet/BetterSparseSpreadSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spreadsheet/BetterSparseSpreadSheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spreadsheet/BetterSpreadSheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spreadsheet/BetterSpreadSheetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spreadsheet/MockBetterSpreadSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spreadsheet/MockBetterSpreadSheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spreadsheet/SparseSpreadSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spreadsheet/SparseSpreadSheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spreadsheet/SpreadSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spreadsheet/SpreadSheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spreadsheet/SpreadSheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spreadsheet/SpreadSheetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spreadsheet/SpreadSheetProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spreadsheet/SpreadSheetProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/BetterSparseSpreadSheetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/BetterSparseSpreadSheetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/BetterSpreadSheetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/BetterSpreadSheetControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/BetterSpreadSheetRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spreadsheet/BetterSpreadSheetRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/EnhancedSpreadSheetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/EnhancedSpreadSheetControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ExSparseSpreadSheetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ExSparseSpreadSheetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/MockBetterSpreadSheetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MockBetterSpreadSheetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/SpreadSheetControllerInteractionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SpreadSheetControllerInteractionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/SpreadSheetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SpreadSheetControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/SpreadSheetEdgeCasesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SpreadSheetEdgeCasesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/SpreadSheetProgramTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SpreadSheetProgramTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +78,12 @@
     "JUnit.SpreadSheetControllerTest.executor": "Run",
     "JUnit.SpreadSheetControllerTest.testFarewellMessage.executor": "Run",
     "JUnit.SpreadSheetControllerTest.testWelcomeMessage.executor": "Run",
+    "JUnit.SpreadSheetEdgeCasesTest.executor": "Run",
+    "JUnit.SpreadSheetEdgeCasesTest.testControllerConsecutiveErrors.executor": "Run",
+    "JUnit.SpreadSheetEdgeCasesTest.testExtremeRowValues.executor": "Run",
+    "JUnit.SpreadSheetEdgeCasesTest.testInvalidRowColumnFormats.executor": "Run",
+    "JUnit.SpreadSheetEdgeCasesTest.testMultipleInvalidCommandsWithRecovery.executor": "Run",
+    "JUnit.SpreadSheetProgramTest.executor": "Run",
     "Maven.PDPLab8 [clean].executor": "Run",
     "Maven.PDPLab8 [org.pitest:pitest-maven:1.17.2:mutationCoverage].executor": "Run",
     "Maven.PDPLab8 [test].executor": "Run",
@@ -97,25 +119,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ExSparseSpreadSheetTest">
-    <configuration name="BetterSparseSpreadSheetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PDPLab8" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BetterSparseSpreadSheetTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BetterSpreadSheetControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PDPLab8" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BetterSpreadSheetControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.EnhancedSpreadSheetControllerTest">
     <configuration name="EnhancedSpreadSheetControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PDPLab8" />
       <option name="PACKAGE_NAME" value="" />
@@ -125,31 +129,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExSparseSpreadSheetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpreadSheetEdgeCasesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PDPLab8" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ExSparseSpreadSheetTest" />
+      <option name="MAIN_CLASS_NAME" value="SpreadSheetEdgeCasesTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MockBetterSpreadSheetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpreadSheetEdgeCasesTest.testInvalidRowColumnFormats" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PDPLab8" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MockBetterSpreadSheetTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="SpreadSheetEdgeCasesTest" />
+      <option name="METHOD_NAME" value="testInvalidRowColumnFormats" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpreadSheetEdgeCasesTest.testMultipleInvalidCommandsWithRecovery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PDPLab8" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SpreadSheetEdgeCasesTest" />
+      <option name="METHOD_NAME" value="testMultipleInvalidCommandsWithRecovery" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpreadSheetProgramTest.testMainMethodComponentCreation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PDPLab8" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SpreadSheetProgramTest" />
+      <option name="METHOD_NAME" value="testMainMethodComponentCreation" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ExSparseSpreadSheetTest" />
-        <item itemvalue="JUnit.MockBetterSpreadSheetTest" />
-        <item itemvalue="JUnit.BetterSparseSpreadSheetTest" />
-        <item itemvalue="JUnit.BetterSpreadSheetControllerTest" />
         <item itemvalue="JUnit.EnhancedSpreadSheetControllerTest" />
+        <item itemvalue="JUnit.SpreadSheetProgramTest.testMainMethodComponentCreation" />
+        <item itemvalue="JUnit.SpreadSheetEdgeCasesTest" />
+        <item itemvalue="JUnit.SpreadSheetEdgeCasesTest.testInvalidRowColumnFormats" />
+        <item itemvalue="JUnit.SpreadSheetEdgeCasesTest.testMultipleInvalidCommandsWithRecovery" />
       </list>
     </recent_temporary>
   </component>
@@ -176,6 +201,7 @@
       <workItem from="1742409845363" duration="314000" />
       <workItem from="1742412471886" duration="3077000" />
       <workItem from="1742480514992" duration="2352000" />
+      <workItem from="1742484026659" duration="3707000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -217,7 +243,23 @@
       <option name="project" value="LOCAL" />
       <updated>1742481856012</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="removed package private methods">
+      <option name="closed" value="true" />
+      <created>1742484055054</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742484055054</updated>
+    </task>
+    <task id="LOCAL-00007" summary="edge cases and complete test cases for whole program working">
+      <option name="closed" value="true" />
+      <created>1742486055204</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1742486055204</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +281,8 @@
     <MESSAGE value="test cases built for welcome and exit msg in controller and mockSpreadsheet of java created with 2 overloaded constructors" />
     <MESSAGE value="final commit before test strength imporvement" />
     <MESSAGE value="new and improved test cases to increase pit scores" />
-    <option name="LAST_COMMIT_MESSAGE" value="new and improved test cases to increase pit scores" />
+    <MESSAGE value="removed package private methods" />
+    <MESSAGE value="edge cases and complete test cases for whole program working" />
+    <option name="LAST_COMMIT_MESSAGE" value="edge cases and complete test cases for whole program working" />
   </component>
 </project>

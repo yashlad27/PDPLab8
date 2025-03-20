@@ -44,13 +44,13 @@ public class BetterSpreadSheetControllerTest {
   @Test
   public void testPrintMenu() {
     Readable input = new StringReader("menu q");
-    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet, input, output);
+    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
+            input, output);
 
     controller.go();
 
     String outputString = output.toString();
 
-    // Check that menu has all supported instructions
     assertTrue(outputString.contains("assign-value"));
     assertTrue(outputString.contains("print-value"));
     assertTrue(outputString.contains("bulk-assign"));
@@ -61,7 +61,8 @@ public class BetterSpreadSheetControllerTest {
   @Test
   public void testAssignValue() {
     Readable input = new StringReader("assign-value A 1 42.5 q");
-    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet, input, output);
+    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
+            input, output);
 
     controller.go();
 
@@ -72,7 +73,8 @@ public class BetterSpreadSheetControllerTest {
   @Test
   public void testPrintValue() {
     Readable input = new StringReader("print-value B 2 q");
-    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet, input, output);
+    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
+            input, output);
 
     controller.go();
 
@@ -83,7 +85,8 @@ public class BetterSpreadSheetControllerTest {
   @Test
   public void testBulkAssign() {
     Readable input = new StringReader("bulk-assign A 1 C 3 10.5 q");
-    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet, input, output);
+    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
+            input, output);
 
     controller.go();
 
@@ -94,7 +97,8 @@ public class BetterSpreadSheetControllerTest {
   @Test
   public void testInvalidInstruction() {
     Readable input = new StringReader("invalid-command q");
-    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet, input, output);
+    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
+            input, output);
 
     controller.go();
 
@@ -104,7 +108,8 @@ public class BetterSpreadSheetControllerTest {
   @Test
   public void testInvalidRowLetter() {
     Readable input = new StringReader("assign-value 123 1 10 q");
-    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet, input, output);
+    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
+            input, output);
 
     controller.go();
 
@@ -114,11 +119,11 @@ public class BetterSpreadSheetControllerTest {
   @Test
   public void testComplexRowLetter() {
     Readable input = new StringReader("print-value ABC 1 q");
-    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet, input, output);
+    BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
+            input, output);
 
     controller.go();
 
-    // ABC = 26*26*1 + 26*2 + 3 = 731 (adjusted to 0-based index)
     assertEquals("get(730,0)\n", log.toString());
   }
 
