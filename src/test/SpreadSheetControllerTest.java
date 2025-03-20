@@ -46,7 +46,7 @@ public class SpreadSheetControllerTest {
 
     String outputString = output.toString();
 
-    assertTrue(outputString.endsWith("Thank you for using this program"));
+    assertTrue(outputString.endsWith("Thank you for using this program!"));
   }
 
 }

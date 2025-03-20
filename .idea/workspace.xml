@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a7da46-d9bb-4272-a4f9-e4877480b5fa" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="36a7da46-d9bb-4272-a4f9-e4877480b5fa" name="Changes" comment="test cases built for welcome and exit msg in controller and mockSpreadsheet of java created with 2 overloaded constructors">
+      <change afterPath="$PROJECT_DIR$/src/spreadsheet/BetterSparseSpreadSheet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spreadsheet/BetterSpreadSheet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spreadsheet/BetterSpreadSheetController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spreadsheet/MockBetterSpreadSheet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/BetterSparseSpreadSheetTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/BetterSpreadSheetRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/SpreadSheetControllerInteractionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spreadsheet/MockSpreadSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spreadsheet/MockSpreadSheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spreadsheet/SpreadSheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spreadsheet/SpreadSheetController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/SpreadSheetControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SpreadSheetControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,9 +59,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BetterSpreadSheetRunner.executor": "Run",
     "Application.SpreadSheetProgram.executor": "Run",
+    "JUnit.BetterSparseSpreadSheetTest.executor": "Run",
+    "JUnit.SpreadSheetControllerInteractionTest.executor": "Run",
+    "JUnit.SpreadSheetControllerTest.executor": "Run",
     "JUnit.SpreadSheetControllerTest.testFarewellMessage.executor": "Run",
     "JUnit.SpreadSheetControllerTest.testWelcomeMessage.executor": "Run",
+    "Maven.PDPLab8 [clean].executor": "Run",
+    "Maven.PDPLab8 [org.pitest:pitest-maven:1.17.2:mutationCoverage].executor": "Run",
+    "Maven.PDPLab8 [test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -85,16 +101,37 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SpreadSheetControllerTest.testFarewellMessage">
-    <configuration name="SpreadSheetProgram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="spreadsheet.SpreadSheetProgram" />
+  <component name="RunManager" selected="JUnit.SpreadSheetControllerTest">
+    <configuration name="BetterSpreadSheetRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BetterSpreadSheetRunner" />
       <module name="PDPLab8" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spreadsheet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BetterSparseSpreadSheetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PDPLab8" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BetterSparseSpreadSheetTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpreadSheetControllerInteractionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PDPLab8" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SpreadSheetControllerInteractionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpreadSheetControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PDPLab8" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SpreadSheetControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,21 +146,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpreadSheetControllerTest.testWelcomeMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PDPLab8" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SpreadSheetControllerTest" />
-      <option name="METHOD_NAME" value="testWelcomeMessage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SpreadSheetControllerTest" />
+        <item itemvalue="JUnit.SpreadSheetControllerInteractionTest" />
+        <item itemvalue="Application.BetterSpreadSheetRunner" />
+        <item itemvalue="JUnit.BetterSparseSpreadSheetTest" />
         <item itemvalue="JUnit.SpreadSheetControllerTest.testFarewellMessage" />
-        <item itemvalue="JUnit.SpreadSheetControllerTest.testWelcomeMessage" />
-        <item itemvalue="Application.SpreadSheetProgram" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +177,7 @@
       <workItem from="1742407154603" duration="275000" />
       <workItem from="1742407436225" duration="2177000" />
       <workItem from="1742409845363" duration="314000" />
-      <workItem from="1742412471886" duration="747000" />
+      <workItem from="1742412471886" duration="3077000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -166,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742409849993</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test cases built for welcome and exit msg in controller and mockSpreadsheet of java created with 2 overloaded constructors">
+      <option name="closed" value="true" />
+      <created>1742414019205</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742414019205</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +222,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="test cases built for welcome and exit msg in controller and mockSpreadsheet of java created with 2 overloaded constructors" />
+    <option name="LAST_COMMIT_MESSAGE" value="test cases built for welcome and exit msg in controller and mockSpreadsheet of java created with 2 overloaded constructors" />
   </component>
 </project>

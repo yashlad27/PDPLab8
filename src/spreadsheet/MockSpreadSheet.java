@@ -41,26 +41,42 @@ public class MockSpreadSheet implements SpreadSheet {
 
   @Override
   public double get(int row, int col) throws IllegalArgumentException {
-    return 0;
+    if (row < 0 || col < 0) {
+      throw new IllegalArgumentException("Row or column cannot be negative");
+    }
+
+    log.append(String.format("get(%d,%d)\n", row, col));
+    return defaultValue;
   }
 
   @Override
   public void set(int row, int col, double value) throws IllegalArgumentException {
+    if (row < 0 || col < 0) {
+      throw new IllegalArgumentException("Row or column cannot be negative");
+    }
 
+    log.append(String.format("set(%d, %d, %.1f)\n", row, col, value));
   }
 
   @Override
   public boolean isEmpty(int row, int col) throws IllegalArgumentException {
-    return false;
+    if (row < 0 || col < 0) {
+      throw new IllegalArgumentException("Row or column cannot be negative");
+    }
+
+    log.append(String.format("isEmpty(%d, %d)\n", row, col));
+    return defaultIsEmpty;
   }
 
   @Override
   public int getWidth() {
-    return 0;
+    log.append("getWidth()\n");
+    return defaultWidth;
   }
 
   @Override
   public int getHeight() {
-    return 0;
+    log.append("getHeight()\n");
+    return defaultHeight;
   }
 }

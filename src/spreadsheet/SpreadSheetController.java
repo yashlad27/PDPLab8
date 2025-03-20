@@ -89,7 +89,7 @@ public class SpreadSheetController {
   }
 
   //converts a row string into a row number starting with 0
-  private int getRowNum(String rowLetters) throws IllegalArgumentException {
+  int getRowNum(String rowLetters) throws IllegalArgumentException {
     int rownumber = 0;
 
     for (int i=0;i<rowLetters.length();i=i+1) {
@@ -113,7 +113,7 @@ public class SpreadSheetController {
     }
   }
 
-  private void printMenu() throws IllegalStateException {
+  void printMenu() throws IllegalStateException {
     writeMessage("Supported user instructions are: "+System.lineSeparator());
     writeMessage("assign-value row-num col-num value (set a cell to a value)"+System.lineSeparator());
     writeMessage("print-value row-num col-num (print the value at a given cell)"+System.lineSeparator());
