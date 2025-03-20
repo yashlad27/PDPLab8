@@ -5,16 +5,10 @@ import org.junit.Test;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.PrintStream;
-import java.lang.reflect.Field;
 
-import spreadsheet.SparseSpreadSheet;
-import spreadsheet.SpreadSheet;
-import spreadsheet.SpreadSheetController;
 import spreadsheet.SpreadSheetProgram;
 
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 /**

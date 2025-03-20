@@ -21,6 +21,6 @@ public class BetterSpreadSheetRunner {
     Appendable ap = System.out;
 
     BetterSpreadSheetController controller = new BetterSpreadSheetController(model, rd, ap);
-    controller.go();
+    controller.executeBetterProgram();
   }
 }

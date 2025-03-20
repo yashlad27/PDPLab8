@@ -37,10 +37,15 @@ public class BetterSpreadSheetController {
    *
    * @throws IllegalStateException if there is an error writing output
    */
-  public void go() throws IllegalStateException {
+  public void executeBetterProgram() throws IllegalStateException {
     Scanner sc = new Scanner(readable);
     boolean quit = false;
-    int row, col, startRow, startCol, endRow, endCol;
+    int row;
+    int col;
+    int startRow;
+    int startCol;
+    int endRow;
+    int endCol;
     double value;
 
     welcomeMessage();
@@ -80,9 +85,9 @@ public class BetterSpreadSheetController {
             value = sc.nextDouble();
 
             betterSheet.bulkSet(startRow, startCol - 1, endRow, endCol - 1, value);
-            writeMessage("Bulk assigned " + value + " to region (" +
-                    startRow + "," + (startCol - 1) + ") to (" +
-                    endRow + "," + (endCol - 1) + ")" + System.lineSeparator());
+            writeMessage("Bulk assigned " + value + " to region ("
+                    + startRow + "," + (startCol - 1) + ") to ("
+                    + endRow + "," + (endCol - 1) + ")" + System.lineSeparator());
           } catch (IllegalArgumentException e) {
             writeMessage("Error: " + e.getMessage() + System.lineSeparator());
           }

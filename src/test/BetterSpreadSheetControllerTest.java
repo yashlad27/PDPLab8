@@ -34,7 +34,7 @@ public class BetterSpreadSheetControllerTest {
     BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
             input, output);
 
-    controller.go();
+    controller.executeBetterProgram();
 
     String outputString = output.toString();
 
@@ -47,7 +47,7 @@ public class BetterSpreadSheetControllerTest {
     BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
             input, output);
 
-    controller.go();
+    controller.executeBetterProgram();
 
     String outputString = output.toString();
 
@@ -64,7 +64,7 @@ public class BetterSpreadSheetControllerTest {
     BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
             input, output);
 
-    controller.go();
+    controller.executeBetterProgram();
 
     assertEquals("set(0, 0, 42.5)\n", log.toString());
     assertTrue(output.toString().contains("Set cell (0,0) to 42.5"));
@@ -76,7 +76,7 @@ public class BetterSpreadSheetControllerTest {
     BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
             input, output);
 
-    controller.go();
+    controller.executeBetterProgram();
 
     assertEquals("get(1,1)\n", log.toString());
     assertTrue(output.toString().contains("Value: 0.0"));
@@ -88,7 +88,7 @@ public class BetterSpreadSheetControllerTest {
     BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
             input, output);
 
-    controller.go();
+    controller.executeBetterProgram();
 
     assertEquals("bulkSet(0, 0, 2, 2, 10.5)\n", log.toString());
     assertTrue(output.toString().contains("Bulk assigned 10.5 to region (0,0) to (2,2)"));
@@ -100,7 +100,7 @@ public class BetterSpreadSheetControllerTest {
     BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
             input, output);
 
-    controller.go();
+    controller.executeBetterProgram();
 
     assertTrue(output.toString().contains("Undefined instruction: invalid-command"));
   }
@@ -111,7 +111,7 @@ public class BetterSpreadSheetControllerTest {
     BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
             input, output);
 
-    controller.go();
+    controller.executeBetterProgram();
 
     assertTrue(output.toString().contains("Error: Invalid row"));
   }
@@ -122,7 +122,7 @@ public class BetterSpreadSheetControllerTest {
     BetterSpreadSheetController controller = new BetterSpreadSheetController(mockSheet,
             input, output);
 
-    controller.go();
+    controller.executeBetterProgram();
 
     assertEquals("get(730,0)\n", log.toString());
   }
